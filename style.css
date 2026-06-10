@@ -1,0 +1,994 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Scroll */
+.container-scroll {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.container-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* BOX 1 */
+#section1 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #fae8a7d7);
+}
+
+.box1 {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+  height: 40vh;
+  margin-top: -100px;
+  transition: 0.3s;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* BOX 2 - PLAYER CORRIGIDO */
+#section2 {
+  display: block;
+  background-color: #fae8a7d7;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 130px;
+  overflow-x: hidden;
+}
+.intro-presente {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+  color: #3a2517;
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+.intro-presente p {
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.intro-presente .destaque {
+  font-family: "Indie Flower", cursive;
+  font-size: 28px;
+  color: #c98a00;
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+/* Transição ondulada */
+#section2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 110px;
+  background: #f0e6d3;
+  clip-path: polygon(
+    0 60%,
+    10% 48%,
+    20% 58%,
+    30% 49%,
+    40% 60%,
+    50% 27%,
+    60% 58%,
+    70% 40%,
+    80% 48%,
+    90% 48%,
+    100% 58%,
+    100% 100%,
+    0 100%
+  );
+}
+
+.box2 {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container2 {
+  display: flex;
+  background-image: url("/public/images/fundo1.png");
+  background-size: 100% 100%; /* Mantém a imagem inteira sem cortar */
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 250px;
+  margin-top: 20px;
+}
+
+/* Responsivo container2 */
+@media (max-width: 600px) {
+  .container2 {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container2 {
+    width: 95%;
+    min-height: 230px;
+  }
+}
+
+.music {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: "Patrick Hand", cursive;
+  padding: 20px; /* Reduzi de 30px para 20px */
+  margin-top: 0px; /* Mudei de -25px para 0px */
+}
+/* Responsivo music */
+@media (max-width: 600px) {
+  .music {
+    padding: 20px;
+    margin-top: -15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .music {
+    padding: 15px;
+    margin-top: -10px;
+  }
+}
+
+.nome-music {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.nome-music h2 {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  margin: 0;
+  padding: 1px;
+}
+
+/* Responsivo nome-music */
+@media (max-width: 600px) {
+  .nome-music h2 {
+    font-size: 32px;
+  }
+  .nome-music p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nome-music h2 {
+    font-size: 28px;
+  }
+  .nome-music p {
+    font-size: 14px;
+  }
+  .intro-presente {
+    padding: 45px 22px 10px;
+    font-size: 22px;
+  }
+
+  .intro-presente .destaque {
+    font-size: 28px;
+  }
+}
+
+.nome-music p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.content-music {
+  display: flex;
+  justify-content: center;
+  height: auto; /* Mudei de 30% para auto */
+  margin-top: 0px; /* Mudei de -17px para 0px */
+  margin-bottom: 5px; /* Adicione esta linha */
+}
+/* Responsivo content-music */
+@media (max-width: 600px) {
+  .content-music {
+    margin-top: -10px;
+  }
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Responsivo options */
+@media (max-width: 480px) {
+  .options {
+    gap: 8px;
+  }
+}
+
+#play {
+  display: block;
+  height: 70px;
+  width: 70px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Responsivo play button */
+@media (max-width: 600px) {
+  #play {
+    height: 55px;
+    width: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  #play {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+#play:hover {
+  transform: scale(1.1);
+}
+
+#next,
+#back {
+  display: block;
+  height: 35px;
+  width: 45px;
+  cursor: pointer;
+}
+
+/* Responsivo next/back */
+@media (max-width: 600px) {
+  #next,
+  #back {
+    height: 28px;
+    width: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  #next,
+  #back {
+    height: 25px;
+    width: 32px;
+  }
+}
+
+#back:hover,
+#next:hover {
+  transform: scale(1.1);
+}
+
+.container-spotify {
+  position: relative;
+  width: 100%;
+}
+
+.Spotify {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  right: 0px;
+  top: -90px;
+  transform: rotate(30deg);
+}
+
+/* Responsivo Spotify */
+@media (max-width: 600px) {
+  .Spotify {
+    width: 70px;
+    height: 70px;
+    right: -5px;
+    top: -70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Spotify {
+    width: 60px;
+    height: 60px;
+    right: -10px;
+    top: -60px;
+  }
+}
+
+/* Barra musica e contador */
+.barraTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.tempo {
+  font-family: "Indie Flower", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+/* Responsivo tempo */
+@media (max-width: 600px) {
+  .tempo {
+    font-size: 20px;
+    transform: translateY(20%);
+  }
+  .tempo p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tempo {
+    font-size: 16px;
+    transform: translateY(10%);
+  }
+  .tempo p {
+    font-size: 14px;
+  }
+}
+
+.tempo p {
+  margin: 1px;
+  font-size: 20px;
+}
+
+/* Estilo barra progresso */
+.player {
+  width: 80%;
+  max-width: 480px;
+}
+
+/* Responsivo player */
+@media (max-width: 600px) {
+  .player {
+    width: 90%;
+  }
+}
+
+.progress-container {
+  width: 100%;
+  height: 22px;
+  background: #333;
+  -webkit-mask: url("/public/images/range.png") center/100% 100% no-repeat;
+  mask: url("/public/images/range.png") center/100% 100% no-repeat;
+  position: relative;
+  cursor: pointer;
+  right: -30px;
+}
+
+/* Responsivo progress-container */
+@media (max-width: 600px) {
+  .progress-container {
+    right: -15px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-container {
+    right: -10px;
+    height: 16px;
+  }
+}
+
+.progress {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: #efcc00;
+}
+
+/* BOX 3 - CARROSSEL */
+.box3 {
+  width: 100%;
+  overflow: hidden;
+}
+.intro-universos {
+  max-width: 900px;
+  margin: 80px auto 10px;
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+  color: #3a2517;
+}
+
+.intro-universos p {
+  font-size: 32px;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.intro-universos h2 {
+  font-family: "Indie Flower", cursive;
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 18px 0;
+  color: #17234a;
+}
+
+.intro-universos .destaque {
+  color: #c98a00;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(5px, 2vw, 1rem);
+  padding: 20px;
+}
+
+.container-slides {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.container-slides img {
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.329);
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  border: 3px solid #d8c29a;
+  border-radius: 6px;
+  clip-path: polygon(
+    1% 2%,
+    8% 1%,
+    16% 2%,
+    24% 1%,
+    32% 2%,
+    40% 1%,
+    48% 2%,
+    56% 1%,
+    64% 2%,
+    72% 1%,
+    80% 2%,
+    88% 1%,
+    98% 2%,
+    99% 10%,
+    98% 18%,
+    99% 28%,
+    98% 38%,
+    99% 48%,
+    98% 58%,
+    99% 68%,
+    98% 78%,
+    99% 88%,
+    98% 98%,
+    90% 99%,
+    82% 98%,
+    74% 99%,
+    66% 98%,
+    58% 99%,
+    50% 98%,
+    42% 99%,
+    34% 98%,
+    26% 99%,
+    18% 98%,
+    10% 99%,
+    2% 98%,
+    1% 90%,
+    2% 80%,
+    1% 70%,
+    2% 60%,
+    1% 50%,
+    2% 40%,
+    1% 30%,
+    2% 20%,
+    1% 10%
+  );
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.on {
+  opacity: 1;
+}
+
+#left,
+#right {
+  width: 100px;
+  height: 70px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0.8;
+  transition:
+    opacity 0.35s ease,
+    transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+#left.btn-hidden,
+#right.btn-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#left:hover,
+#right:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+#left img,
+#right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Responsivo carrossel */
+@media (max-width: 768px) {
+  #left,
+  #right {
+    width: 60px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  #left,
+  #right {
+    width: 45px;
+    height: 35px;
+  }
+
+  .slide {
+    border-width: 2px;
+  }
+}
+@media (max-width: 480px) {
+  .intro-universos {
+    margin: 45px auto 0;
+  }
+
+  .intro-universos p {
+    font-size: 21px;
+  }
+
+  .intro-universos h2 {
+    font-size: 30px;
+  }
+
+  .intro-universos .destaque {
+    font-size: 23px;
+  }
+}
+
+/* Seção 3 */
+#section3 {
+  background: #f0e6d3;
+  min-height: 100vh;
+  margin-top: -1px;
+}
+.intro-cartas {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+  color: #3a2517;
+}
+
+.intro-cartas p {
+  max-width: 1100px;
+  font-size: 39px;
+  line-height: 1.15;
+  margin: 0 0 22px;
+  font-weight: bold;
+}
+
+.intro-cartas .destaque {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  color: #8b5a2b;
+  margin-top: 28px;
+  font-weight: bold;
+}
+
+/* Box 4 - Cartas */
+.frame {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail {
+  width: 15%;
+  min-width: 150px;
+  aspect-ratio: 3/2;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mail-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.mail.open .mail-inner {
+  transform: rotateY(180deg);
+}
+
+.mail-front,
+.mail-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.mail-front img,
+.mail-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.mail-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.mail:hover {
+  transform: scale(1.05);
+}
+
+.mail-date {
+  position: absolute;
+  font-family: "Allura", cursive;
+  font-weight: bold;
+  font-size: 20px;
+  color: #583e2db4;
+  padding: 4px;
+}
+
+/* Responsivo cartas */
+@media (max-width: 1024px) {
+  .mail {
+    width: 20%;
+    min-width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mail {
+    width: 25%;
+    min-width: 110px;
+  }
+  .mail-date {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame {
+    gap: 10px;
+    padding: 30px 15px;
+  }
+  .mail {
+    width: 40%;
+    min-width: 100px;
+  }
+  .mail-date {
+    font-size: 12px;
+  }
+  .intro-cartas {
+    padding: 60px 24px 20px;
+  }
+
+  .intro-cartas p {
+    font-size: 29px;
+    line-height: 1.2;
+  }
+
+  .intro-cartas .destaque {
+    font-size: 31px;
+  }
+}
+
+/* Modal carta */
+.modal-carta {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.carta-modal-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta-papel {
+  position: relative;
+  height: min(92vh, 900px);
+  width: auto;
+  aspect-ratio: 3/4;
+  background-image: url("/public/images/carta.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carta-texto {
+  position: absolute;
+  top: 18%;
+  left: 14%;
+  width: 72%;
+  height: 56%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: "Allura", cursive;
+  font-size: 22px;
+  line-height: 1.7;
+  color: #4b2e1f;
+  text-align: center;
+  padding: 0 10px 120px 0;
+}
+
+.carta-texto::-webkit-scrollbar {
+  display: none;
+}
+
+.carta-controles {
+  position: absolute;
+  top: 2.5%;
+  right: 8.5%;
+  display: flex;
+  gap: 15px;
+}
+
+.carta-controles button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: #3a2517;
+  transition: 0.3s;
+  font-family: "Allura", cursive;
+}
+
+.carta-controles button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsivo modal */
+@media (max-width: 768px) {
+  .carta-texto {
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0 5px 80px 0;
+  }
+  .carta-controles button {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carta-texto {
+    font-size: 14px;
+    line-height: 1.4;
+    top: 15%;
+    height: 60%;
+  }
+  .carta-controles {
+    gap: 8px;
+    right: 10%;
+  }
+  .carta-controles button {
+    font-size: 16px;
+    padding: 2px 5px;
+  }
+}
+
+/* ============================================ */
+/* CORREÇÕES PARA MOBILE - REDUZ ESPAÇOS ENTRE SEÇÕES */
+/* ============================================ */
+
+@media (max-width: 768px) {
+  /* Remove o snap-scroll no mobile para evitar espaços estranhos */
+  .container-scroll {
+    scroll-snap-type: none;
+  }
+
+  #section1,
+  #section2,
+  #section3 {
+    scroll-snap-align: none;
+  }
+
+  /* Reduz o padding-bottom da section2 */
+  #section2 {
+    padding-bottom: 60px;
+    min-height: auto; /* Remove altura mínima fixa */
+  }
+
+  /* Reduz a altura da onda */
+  #section2::after {
+    height: 50px;
+  }
+
+  /* Ajusta a altura da section1 */
+  #section1 {
+    height: 90vh;
+  }
+
+  /* Reduz o padding do carrossel */
+  .slides {
+    min-height: 60vh;
+    padding: 40px 20px;
+  }
+
+  /* Ajusta a section3 */
+  #section3 {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  /* Reduz padding do frame das cartas */
+  .frame {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Reduz ainda mais no mobile pequeno */
+  #section2 {
+    padding-bottom: 40px;
+  }
+
+  #section2::after {
+    height: 40px;
+  }
+
+  .slides {
+    min-height: 50vh;
+    padding: 30px 15px;
+  }
+
+  .container2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #section2 {
+    padding-bottom: 30px;
+  }
+
+  #section2::after {
+    height: 35px;
+  }
+
+  .slides {
+    min-height: 45vh;
+    padding: 20px 10px;
+  }
+
+  .box2 {
+    padding: 10px;
+  }
+
+  .frame {
+    padding: 20px 15px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  #left,
+  #right {
+    display: none;
+  }
+}

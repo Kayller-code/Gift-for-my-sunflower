@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gift</title>
+  </head>
+  <body>
+    <main>
+      <div class="container-scroll">
+        <canvas id="canvas"></canvas>
+        <section id="section1">
+          <!-- BOX 1 -->
+          <div class="box1">
+            <div class="container">
+              <img src="images/seçao1.1.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section id="section2">
+          <div class="intro-presente">
+            <p>
+              Oi sunnyday, Eu queria te dar um lugar que você pudesse visitar
+              sempre que sentisse saudade.
+            </p>
+            <p>Então eu juntei algumas das coisas que mais me lembram você.</p>
+            <p>E como você não facilitou com uma única musica</p>
+            <p class="destaque">
+              Ouça essa playlist totalmente aleatória <br />Mas que me faz
+              pensar em você
+            </p>
+          </div>
+          <!-- BOX 2 -->
+          <div class="box2">
+            <div class="container2">
+              <div class="music">
+                <div class="nome-music">
+                  <h2>Minha Musica</h2>
+                  <p>- Artist -</p>
+                </div>
+
+                <div class="content-music">
+                  <div class="barraTime">
+                    <div class="tempo">
+                      <p id="pregresso">0:00</p>
+                      <span>|</span>
+                      <p id="timeRestante">0:00</p>
+                    </div>
+
+                    <audio id="audio"></audio>
+
+                    <div class="container-spotify">
+                      <div class="player">
+                        <div class="progress-container" id="progressContainer">
+                          <div class="progress" id="progress"></div>
+                        </div>
+                      </div>
+                      <img class="Spotify" src="images/logomusica.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="options">
+                  <img id="back" src="images/back.png" alt="" />
+                  <img id="play" src="images/Play.png" alt="" />
+                  <img id="next" src="images/next.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="intro-universos">
+            <p>Eu já li e assisti várias histórias diferentes.</p>
+            <p>
+              Algumas em mundos fictícios, alguns eu ainda espero assitir com
+              você.
+            </p>
+            <p>Mas não é ruim imaginar nós dois vivendo algo assim.</p>
+            <p class="destaque">
+              Porque, no fundo, eu acho que a resposta seria a mesma.
+            </p>
+          </div>
+
+          <!-- BOX 3 -->
+          <div class="box3">
+            <div class="slides">
+              <button id="left">
+                <img src="images/left.png" alt="" />
+              </button>
+              <div class="container-slides">
+                <img src="images/C1 Inicio Carrossel.png" class="slide on" />
+
+                <img src="images/C2 Pokemon.png" class="slide" />
+
+                <img src="images/C3 Dragoes.png" class="slide" />
+
+                <img src="images/C4 SemiDeuses.png" class="slide" />
+
+                <img src="images/C5 Anne.png" class="slide" />
+
+                <img src="images/C6 Stranger.png" class="slide" />
+
+                <img src="images/C7 Final Carrossel.png" class="slide" />
+              </div>
+              <button id="right">
+                <img src="images/right.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="section3">
+          <div class="intro-cartas">
+            <p>
+              Mas é impressionante que, entre todos os universos possíveis, o
+              melhor deles ainda seja aquele em que eu estou com você.
+            </p>
+
+            <p class="destaque">
+              E foi vivendo esse universo que eu escrevi algumas coisinhas.
+            </p>
+          </div>
+          <div class="box4">
+            <div class="frame">
+              <div class="mail" data-carta="1">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">03 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="2">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">04 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="3">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">05 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="4">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">05 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="5">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">07 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="6">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">10 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="7">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">11 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="8">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">12 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="9">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">17 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="10">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">18 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="11">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">20 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="12">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">21 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="13">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">22 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="14">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">23 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="15">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">24 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="16">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">26 FEV 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="17">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">23 ABR 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="18">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">27 ABR 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="19">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">30 ABR 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="20">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">07 MAI 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="21">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">22 MAI 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="22">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">23 MAI 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="23">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">24 MAI 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="24">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">30 MAI 2026</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mail" data-carta="25">
+                <div class="mail-inner">
+                  <!-- FRENTE -->
+                  <div class="mail-front">
+                    <img src="images/envelope-front.png" />
+                  </div>
+
+                  <!-- VERSO -->
+                  <div class="mail-back">
+                    <img src="images/envelope-back.png" />
+                    <div class="mail-date">10 JUN 2026</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
