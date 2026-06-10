@@ -877,18 +877,36 @@ main {
 }
 
 @media (max-width: 480px) {
+  .modal-carta {
+    padding: 28px 18px;
+    align-items: center;
+  }
+
+  .carta-papel {
+    width: 88vw;
+    height: auto;
+    max-height: 78vh;
+    aspect-ratio: 3 / 4;
+  }
+
   .carta-texto {
-    font-size: 14px;
-    line-height: 1.4;
-    top: 15%;
-    height: 60%;
+    top: 16%;
+    left: 13%;
+    width: 74%;
+    height: 54%;
+    font-size: 15px;
+    line-height: 1.45;
+    padding-bottom: 80px;
   }
+
   .carta-controles {
+    top: 3%;
+    right: 9%;
     gap: 8px;
-    right: 10%;
   }
+
   .carta-controles button {
-    font-size: 16px;
+    font-size: 17px;
     padding: 2px 5px;
   }
 }
