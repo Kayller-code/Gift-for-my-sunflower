@@ -148,7 +148,7 @@ main {
 
 .container2 {
   display: flex;
-  background-image: url("/public/images/fundo1.png");
+  background-image: url("images/fundo1.png");
   background-size: 100% 100%; /* Mantém a imagem inteira sem cortar */
   background-repeat: no-repeat;
   width: 500px;
@@ -421,8 +421,8 @@ main {
   width: 100%;
   height: 22px;
   background: #333;
-  -webkit-mask: url("/public/images/range.png") center/100% 100% no-repeat;
-  mask: url("/public/images/range.png") center/100% 100% no-repeat;
+  -webkit-mask: url("images/range.png") center/100% 100% no-repeat;
+  mask: url("images/range.png") center/100% 100% no-repeat;
   position: relative;
   cursor: pointer;
   right: -30px;
@@ -814,7 +814,7 @@ main {
   height: min(92vh, 900px);
   width: auto;
   aspect-ratio: 3/4;
-  background-image: url("/public/images/carta.png");
+  background-image: url("images/carta.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
