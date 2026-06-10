@@ -148,7 +148,7 @@ main {
 
 .container2 {
   display: flex;
-  background-image: url("/images/fundo1.png");
+  background-image: url("images/fundo1.png");
   background-size: 100% 100%; /* Mantém a imagem inteira sem cortar */
   background-repeat: no-repeat;
   width: 500px;
